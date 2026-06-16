@@ -1,0 +1,71 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .mandala-stroke { stroke: currentColor; fill: none; }
+    .mandala-fill { fill: currentColor; }
+  </style>
+  
+  <!-- Central flower -->
+  <circle cx="250" cy="250" r="16" class="mandala-stroke" stroke-width="4"/>
+  <circle cx="250" cy="250" r="10" class="mandala-fill"/>
+  
+  <!-- Outer petalled rings and dashes -->
+  <circle cx="250" cy="250" r="32" class="mandala-stroke" stroke-width="3" stroke-dasharray="5,5"/>
+  <circle cx="250" cy="250" r="48" class="mandala-stroke" stroke-width="4"/>
+  
+  <!-- Petals Level 1 -->
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(0 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(30 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(60 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(90 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(120 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(150 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(180 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(210 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(240 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(270 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(300 250 250)"/>
+  <path d="M 250,195 Q 262,220 250,235 Q 238,220 250,195 Z" class="mandala-stroke" stroke-width="3" transform="rotate(330 250 250)"/>
+  
+  <circle cx="250" cy="250" r="70" class="mandala-stroke" stroke-width="4"/>
+  <circle cx="250" cy="250" r="82" class="mandala-stroke" stroke-width="2.5" stroke-dasharray="4,4"/>
+  <circle cx="250" cy="250" r="96" class="mandala-stroke" stroke-width="6" stroke-dasharray="14,6"/>
+  
+  <!-- Outer Petals / Rays -->
+  <g stroke="currentColor" stroke-width="3.5" fill="none">
+    <!-- 24 rays -->
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(0 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(15 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(30 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(45 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(60 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(75 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(90 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(105 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(120 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(135 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(150 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(165 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(180 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(195 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(210 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(225 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(240 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(255 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(270 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(285 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(300 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(315 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(330 250 250)"/>
+    <line x1="250" y1="150" x2="250" y2="132" transform="rotate(345 250 250)"/>
+  </g>
+  
+  <circle cx="250" cy="250" r="120" class="mandala-stroke" stroke-width="3"/>
+  <circle cx="250" cy="250" r="136" class="mandala-stroke" stroke-width="4"/>
+  <circle cx="250" cy="250" r="148" class="mandala-stroke" stroke-width="3" stroke-dasharray="6,10"/>
+  <circle cx="250" cy="250" r="162" class="mandala-stroke" stroke-width="7"/>
+  <circle cx="250" cy="250" r="178" class="mandala-stroke" stroke-width="3"/>
+  <circle cx="250" cy="250" r="195" class="mandala-stroke" stroke-width="3" stroke-dasharray="4,8"/>
+  <circle cx="250" cy="250" r="215" class="mandala-stroke" stroke-width="5"/>
+  <circle cx="250" cy="250" r="235" class="mandala-stroke" stroke-width="2.5" stroke-dasharray="20,12"/>
+  <circle cx="250" cy="250" r="245" class="mandala-stroke" stroke-width="3"/>
+</svg>
