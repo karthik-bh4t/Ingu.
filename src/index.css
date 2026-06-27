@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta: #B65E47;
+  --color-terracotta: #B65E47;
+  --color-warmcream: #FAF7F2;
+  --color-offwhite: #B65E47; /* Terracotta orange-brown background */
+  --color-chocolate: #3A2A24; /* Chocolate brown background */
+  --color-darkwood: #E9D8C7; /* Warm cream headings */
+  --color-mutedolive: #A5B59C; /* Lighter olive for dark background readability */
+  --color-charcoal: #FAF7F2; /* Light cream body text */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Outfit', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-ebgaramond: 'EB Garamond', serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-instrumentsans: 'Instrument Sans', sans-serif;
+  --breakpoint-xs: 475px;
+}
+
+/* Base styles and defaults */
+html {
+  scroll-behavior: smooth;
+  background-color: #B65E47; /* terracotta orange-brown */
+  color: #FAF7F2; /* light cream text */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #B65E47;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A2A24;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E9D8C7;
+}
+
+/* Custom Folk Art & Pattern Styles */
+.grainy-bg {
+  position: relative;
+}
+
+.grainy-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Parallax-like slow transition styles */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Handcrafted illustrations and divider styles */
+.folk-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.folk-divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #B65E47, transparent);
+  flex-grow: 1;
+  max-width: 150px;
+}
+
+/* Image styling */
+.img-wood-frame {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 12px #3A2A24,
+    0 0 0 13px #E9D8C7;
+}
+
+/* Traditional Kolam / Mandala Border */
+.kolam-border {
+  border: 2px solid #B65E47;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.kolam-border::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px dashed #B65E47;
+  pointer-events: none;
+}
+
+/* Hero split-screen diagonal clips */
+.clip-left {
+  clip-path: polygon(0 0, 100% 0, 100% 43%, 0 53%);
+}
+
+@media (min-width: 768px) {
+  .clip-left {
+    clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+  }
+  .clip-right {
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.parallax-img {
+  will-change: transform;
+  transform-origin: center center;
+  transition: transform 0.05s ease-out;
+}
+
+
+/* Folk Art Decorative Animation System */
+@keyframes slow-spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slow-spin-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-slow-spin-cw {
+  animation: slow-spin-cw 60s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.animate-slow-spin-ccw {
+  animation: slow-spin-ccw 85s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Folk art background container wrapper */
+.folk-art-bg-container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  opacity: 0.08; /* Subtle 8% opacity */
+  transition: opacity 0.5s ease;
+}
+
+.folk-art-bg-container:hover {
+  opacity: 0.15; /* Becomes slightly more discovered on interaction */
+}
+
+/* Footer mandala animation: 60% static, 20% slow rotation, 10% subtle parallax drift, 10% reset */
+@keyframes footer-mandala-drift-cw {
+  0%, 60% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  80% {
+    transform: rotate(15deg) translate(0, 0);
+  }
+  90% {
+    transform: rotate(15deg) translate(6px, -4px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+.animate-footer-mandala-cw {
+  animation: footer-mandala-drift-cw 25s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes footer-mandala-drift-ccw {
+  0%, 60% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  80% {
+    transform: rotate(-15deg) translate(0, 0);
+  }
+  90% {
+    transform: rotate(-15deg) translate(-6px, 4px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+.animate-footer-mandala-ccw {
+  animation: footer-mandala-drift-ccw 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Rotating outer mandala animation */
+.rotating-mandala {
+  animation: slow-spin-cw 40s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Background radial glow (dark circular shadow) behind logo medallion for readability */
+.bg-radial-glow {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.3) 45%,
+    rgba(0, 0, 0, 0.12) 65%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  filter: blur(16px);
+}
+
+/* Solid cream background inside the gold ring to keep text legible */
+.logo-center-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #FAF7F2;
+  border-radius: 9999px;
+  clip-path: circle(28% at 50% 50%);
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* Premium soft fade-in for hero text content */
+.hero-fade-in {
+  animation: soft-fade-in 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes soft-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+

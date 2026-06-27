@@ -1,7 +1,0 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="95" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="3"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="100" y="106" font-family="'Playfair Display', 'Georgia', serif" font-weight="800" font-size="42" fill="currentColor" text-anchor="middle" letter-spacing="2">INGÚ</text>
-  <text x="100" y="138" font-family="'DM Sans', 'Arial', sans-serif" font-weight="700" font-size="7.5" fill="currentColor" text-anchor="middle" letter-spacing="2">IDLY • DOSA • VAADAPPA • COFFEE</text>
-</svg>
