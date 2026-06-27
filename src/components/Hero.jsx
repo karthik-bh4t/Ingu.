@@ -213,7 +213,7 @@ export default function Hero() {
 
           {/* Decorative Corner Mandala */}
           <FolkCornerMandala
-            className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 opacity-[0.22] text-warmcream/80 pointer-events-none animate-slow-spin-cw w-[240px] h-[240px]"
+            className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 opacity-[0.22] text-warmcream/80 pointer-events-none animate-slow-spin-cw w-[320px] h-[320px]"
           />
 
           {/* Content (Top Aligned) */}
@@ -245,7 +245,7 @@ export default function Hero() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none select-none">
             {/* Non-interactive centerpiece disc */}
             <div
-              className="relative w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] pointer-events-auto"
+              className="relative w-[190px] h-[190px] xs:w-[220px] xs:h-[220px] pointer-events-auto"
             >
               {/* Soft radial glow underneath the medallion for maximum legibility */}
               <div className="bg-radial-glow absolute inset-[-20px] rounded-full z-0"></div>
@@ -274,7 +274,7 @@ export default function Hero() {
           </div>
 
           {/* SECTION 3: Contemporary Cafe */}
-          <div className="relative w-full min-h-[380px] bg-warmcream text-darkwood overflow-hidden flex flex-col justify-end p-6 pt-28 pb-6">
+          <div className="relative w-full min-h-[380px] bg-warmcream text-darkwood overflow-hidden flex flex-col justify-end p-6 pt-36 pb-6">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img
@@ -288,7 +288,7 @@ export default function Hero() {
 
             {/* Decorative Corner Mandala */}
             <FolkCornerMandala
-              className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 opacity-[0.20] text-terracotta pointer-events-none animate-slow-spin-ccw w-[240px] h-[240px]"
+              className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 opacity-[0.20] text-terracotta pointer-events-none animate-slow-spin-ccw w-[320px] h-[320px]"
             />
 
             {/* Content (Bottom Aligned, Right Aligned) */}

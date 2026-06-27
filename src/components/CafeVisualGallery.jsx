@@ -40,11 +40,8 @@ export default function CafeVisualGallery() {
     }
   ];
 
-  const row1Photos = [photos[0], photos[1], photos[2], photos[3], photos[4]];
-  const row2Photos = [photos[5], photos[6], photos[0], photos[1], photos[3]];
-
   return (
-    <section id="visual-gallery" className="w-full bg-offwhite py-24 md:py-32 px-6 md:px-16 relative overflow-hidden grainy-bg">
+    <section id="visual-gallery" className="w-full bg-offwhite py-20 md:py-28 px-6 relative overflow-hidden grainy-bg">
 
       {/* 70% Static Ornaments (Scaled and low opacity on mobile) */}
       <div className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 opacity-[0.06] md:opacity-[0.12] text-darkwood w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] pointer-events-none z-0">
@@ -65,7 +62,7 @@ export default function CafeVisualGallery() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-12 scroll-reveal">
           <span className="text-[10px] sm:text-xs font-sans tracking-[0.45em] text-terracotta uppercase font-bold block mb-2">
             The Space
           </span>
@@ -78,63 +75,16 @@ export default function CafeVisualGallery() {
           </p>
         </div>
 
-        {/* Dynamic Double-Row Infinite Marquee Sliders */}
-        <div className="flex flex-col gap-6 md:gap-8 w-full overflow-hidden">
-          {/* Row 1: Right-to-Left (Normal) */}
-          <InfiniteSlider speed={35} speedOnHover={12} gap={24} reverse={false} className="py-2">
-            {row1Photos.map((photo, index) => (
-              <div 
-                key={`row1-${index}`} 
-                className="relative overflow-hidden group rounded-2xl border border-black/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] w-[260px] sm:w-[320px] md:w-[360px] h-[180px] sm:h-[220px] md:h-[250px]"
-              >
-                <img 
-                  src={photo.src} 
-                  alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-                
-                {/* Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-darkwood/90 via-darkwood/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
-                {/* Visual Label */}
-                <div className="absolute bottom-4 left-4 text-left translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 pointer-events-none">
-                  <span className="text-[8px] sm:text-[9px] font-sans tracking-[0.3em] text-warmcream uppercase block mb-0.5 opacity-90 font-bold">
-                    Explore
-                  </span>
-                  <h4 className="font-serif text-sm sm:text-base font-semibold text-warmcream tracking-wide">
-                    {photo.title}
-                  </h4>
-                </div>
-              </div>
-            ))}
-          </InfiniteSlider>
-
-          {/* Row 2: Left-to-Right (Reverse) */}
-          <InfiniteSlider speed={35} speedOnHover={12} gap={24} reverse={true} className="py-2">
-            {row2Photos.map((photo, index) => (
-              <div 
-                key={`row2-${index}`} 
-                className="relative overflow-hidden group rounded-2xl border border-black/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] w-[260px] sm:w-[320px] md:w-[360px] h-[180px] sm:h-[220px] md:h-[250px]"
-              >
-                <img 
-                  src={photo.src} 
-                  alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-                
-                {/* Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-darkwood/90 via-darkwood/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
-                {/* Visual Label */}
-                <div className="absolute bottom-4 left-4 text-left translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 pointer-events-none">
-                  <span className="text-[8px] sm:text-[9px] font-sans tracking-[0.3em] text-warmcream uppercase block mb-0.5 opacity-90 font-bold">
-                    Explore
-                  </span>
-                  <h4 className="font-serif text-sm sm:text-base font-semibold text-warmcream tracking-wide">
-                    {photo.title}
-                  </h4>
-                </div>
-              </div>
+        {/* Dynamic Single-Row Infinite Marquee Slider */}
+        <div className="w-full overflow-hidden py-4">
+          <InfiniteSlider gap={28} reverse speed={40} speedOnHover={15}>
+            {photos.map((photo, index) => (
+              <img 
+                key={index} 
+                src={photo.src} 
+                alt={photo.alt}
+                className="h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px] w-auto rounded-3xl object-cover border border-black/10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:scale-[1.02] transition-transform duration-500 cursor-pointer"
+              />
             ))}
           </InfiniteSlider>
         </div>
